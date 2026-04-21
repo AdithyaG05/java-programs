@@ -58,3 +58,24 @@ StringOperations.java - https://github.com/AdithyaG05/java-programs/blob/main/2a
 SubListExample.java - https://github.com/AdithyaG05/java-programs/blob/main/p4.png
 
 SwapElements.java - https://github.com/AdithyaG05/java-programs/blob/main/P10.png
+
+checkSession.jsp - https://github.com/AdithyaG05/java-programs/blob/main/9c1.png
+https://github.com/AdithyaG05/java-programs/blob/main/9c2.png
+
+
+welcome.jsp - https://github.com/AdithyaG05/java-programs/blob/main/9b1.png
+
+
+
+
+SessionServlet.java - https://github.com/AdithyaG05/java-programs/blob/main/9a.png
+
+CookieServlet.java - https://github.com/AdithyaG05/java-programs/blob/main/8b1.png
+https://github.com/AdithyaG05/java-programs/blob/main/8b2.png
+
+Second.jsp - https://github.com/AdithyaG05/java-programs/blob/main/7a2.png
+https://github.com/AdithyaG05/java-programs/blob/main/7a1.png
+https://github.com/AdithyaG05/java-programs/blob/main/7a3.png
+
+viewCookies.jsp - https://github.com/AdithyaG05/java-programs/blob/main/7b1.png
+http://github.com/AdithyaG05/java-programs/blob/main/7b2.png
