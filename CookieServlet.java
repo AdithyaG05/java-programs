@@ -1,4 +1,4 @@
-package com.cookieservlet;
+package lab8b;
 
 import java.io.*;
 import javax.servlet.*;
@@ -8,15 +8,13 @@ import javax.servlet.annotation.WebServlet;
 @WebServlet("/CookieServlet")
 public class CookieServlet extends HttpServlet {
 
-    private static final long serialVersionUID = 1L;
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        String userName = request.getParameter("userName");
+        String name = request.getParameter("username");
 
         Cookie userCookie = null;
         Cookie countCookie = null;
@@ -37,9 +35,9 @@ public class CookieServlet extends HttpServlet {
             }
         }
 
-        // 🆕 First time login
-        if (userName != null && !userName.isEmpty()) {
-            userCookie = new Cookie("user", userName);
+        // 🆕 First time user
+        if (name != null && !name.isEmpty()) {
+            userCookie = new Cookie("user", name);
             count = 1;
             countCookie = new Cookie("count", String.valueOf(count));
         }
@@ -49,30 +47,44 @@ public class CookieServlet extends HttpServlet {
             countCookie.setValue(String.valueOf(count));
         }
 
-        // ⏱ Set cookie expiry (30 seconds)
+        // ⏱ Expiry (30 seconds demo)
         if (userCookie != null) userCookie.setMaxAge(30);
         if (countCookie != null) countCookie.setMaxAge(30);
 
-        // ➕ Add cookies to response
         if (userCookie != null) response.addCookie(userCookie);
         if (countCookie != null) response.addCookie(countCookie);
 
-        // 🎨 OUTPUT PAGE
+        // 🎨 OUTPUT
         out.println("<html><body>");
 
         if (userCookie == null) {
-            // 🔴 Guest user (first time or expired)
-            out.println("<h2 style='color:red'>Welcome Guest! you have been logged out or kindly login first time</h2>");
+            out.println("<h2 style='color:red'>Welcome Guest! Please login first</h2>");
             out.println("<form action='CookieServlet' method='get'>");
-            out.println("Enter your name: <input type='text' name='userName'>");
+            out.println("Enter your name: <input type='text' name='username'>");
             out.println("<input type='submit' value='Submit'>");
             out.println("</form>");
         } else {
-            // 🔵 Returning user
             out.println("<h1 style='color:blue'>Welcome back, " + userCookie.getValue() + "!</h1>");
-            out.println("<h1 style='color:magenta'>You have visited this page " + count + " times!</h1>");
+            out.println("<h2 style='color:magenta'>You have visited this page " + count + " times</h2>");
         }
 
+        // 📋 Detailed Cookie List
+        out.println("<h3>Cookie Details:</h3>");
+
+        if (cookies != null) {
+            for (Cookie c : cookies) {
+                out.println("<p>");
+                out.println("Name: " + c.getName() + "<br>");
+                out.println("Value: " + c.getValue() + "<br>");
+                out.println("Max Age: " + c.getMaxAge() + " seconds<br>");
+                out.println("------------------------");
+                out.println("</p>");
+            }
+        } else {
+            out.println("<p>No cookies found</p>");
+        }
+
+        out.println("<br><a href='index.html'>Go Back</a>");
         out.println("</body></html>");
     }
 }
