@@ -79,3 +79,28 @@ https://github.com/AdithyaG05/java-programs/blob/main/7a3.png
 
 viewCookies.jsp - https://github.com/AdithyaG05/java-programs/blob/main/7b1.png
 http://github.com/AdithyaG05/java-programs/blob/main/7b2.png
+
+FactorialServlet.java - https://github.com/AdithyaG05/java-programs/blob/main/6a1.png
+https://github.com/AdithyaG05/java-programs/blob/main/6a2.png
+
+
+PrimeServlet.java - https://github.com/AdithyaG05/java-programs/blob/main/6c.png
+https://github.com/AdithyaG05/java-programs/blob/main/6b.png
+
+UserDataServlet.java - https://github.com/AdithyaG05/java-programs/blob/main/10a1.png
+https://github.com/AdithyaG05/java-programs/blob/main/10a2.png
+
+
+ResultServlet.java - https://github.com/AdithyaG05/java-programs/blob/main/10b1.png
+
+setSession.jsp - https://github.com/AdithyaG05/java-programs/blob/main/9c1.png
+https://github.com/AdithyaG05/java-programs/blob/main/9c2.png
+
+Welcome.jsp - https://github.com/AdithyaG05/java-programs/blob/main/9b1.png
+https://github.com/AdithyaG05/java-programs/blob/main/9a.png
+
+addCookie.jsp - https://github.com/AdithyaG05/java-programs/blob/main/7b1.png
+https://github.com/AdithyaG05/java-programs/blob/main/7b2.png
+
+
+
